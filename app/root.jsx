@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {defer} from '@shopify/remix-oxygen';
 import {
   Links,
