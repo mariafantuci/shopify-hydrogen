@@ -1,11 +1,10 @@
 /* eslint-disable prettier/prettier */
 import {defer} from '@shopify/remix-oxygen';
+import {Header} from './components/Header'
 import {
   Links,
   Meta,
-  Outlet,
   Scripts,
-  ScrollRestoration,
   useCatch,
   useLoaderData,
   useMatches,
@@ -21,6 +20,9 @@ import favicon from '../public/favicon.svg';
 import {DEFAULT_LOCALE, parseMenu} from './lib/utils';
 import invariant from 'tiny-invariant';
 import {useAnalytics} from './hooks/useAnalytics';
+
+import {detectBreakpoint} from './utils/detect-breakpoint';
+detectBreakpoint.init()
 
 const seo = ({data, pathname}) => ({
   title: data?.layout?.shop?.name,
@@ -86,14 +88,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Layout
-          layout={data.layout}
-          key={`${locale.language}-${locale.country}`}
-        >
-          <Outlet />
-        </Layout>
-        <ScrollRestoration />
-        <Scripts />
+        <Header layout={data.layout} />
       </body>
     </html>
   );
