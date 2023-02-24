@@ -1,5 +1,7 @@
 /* eslint-disable prettier/prettier */
 import {defer} from '@shopify/remix-oxygen';
+import {AlertMessage} from './components/AlertMessage'
+
 import {
   Links,
   Meta,
@@ -86,6 +88,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <AlertMessage />
         <Layout
           layout={data.layout}
           key={`${locale.language}-${locale.country}`}
