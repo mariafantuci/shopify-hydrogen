@@ -21,9 +21,6 @@ import {DEFAULT_LOCALE, parseMenu} from './lib/utils';
 import invariant from 'tiny-invariant';
 import {useAnalytics} from './hooks/useAnalytics';
 
-import {detectBreakpoint} from './utils/detect-breakpoint';
-detectBreakpoint.init()
-
 const seo = ({data, pathname}) => ({
   title: data?.layout?.shop?.name,
   titleTemplate: '%s | Hydrogen Demo Store',
