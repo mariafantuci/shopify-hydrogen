@@ -1,6 +1,11 @@
 /* eslint-disable prettier/prettier */
 import {defer} from '@shopify/remix-oxygen';
+<<<<<<< HEAD
 import {Header} from './components/Header'
+=======
+import {AlertMessage} from './components/AlertMessage'
+
+>>>>>>> ee673195648240683d8327440debd097341615bd
 import {
   Links,
   Meta,
@@ -85,6 +90,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <AlertMessage />
         <Header layout={data.layout} />
       </body>
     </html>
