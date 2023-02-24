@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 
 import {Link} from '~/components';
-
+import Logo from '../assets/images/logo.svg'
 export function Header({layout}) {
   const links = layout?.headerMenu
   return (
@@ -9,7 +9,8 @@ export function Header({layout}) {
       <div className="container flex justify-between items-center">
           <div className="flex items-center">
             <Link to="/">
-              <h1 className="text-black">{layout?.shop.name ?? 'Hydrogen'}</h1>
+              <img src={Logo} alt="logo" />
+              
             </Link>
               <nav className="">
                   <ul className="w-full flex flex-col md:flex-row ">
@@ -49,8 +50,8 @@ export function Header({layout}) {
               <button className="mr-6 text-sm uppercase font-bold hidden lg:block" aria-label="Open search" data-search-open >
                   Search
               </button>
-              
-          </div>            
+
+          </div>
       </div>
     </header>
   );
